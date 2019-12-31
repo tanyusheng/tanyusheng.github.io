@@ -229,6 +229,128 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.yusheng123.cn/2019/12/31/wordpress/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YUSHENG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/31/wordpress/" itemprop="url">wordpress</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-31T22:18:00+08:00">
+                2019-12-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在WordPress的设置常规选项里面，如果手欠将域名的http改成https,<img src="http://ww1.sinaimg.cn/large/005NKUZGgy1gag9gn1ltsj31ek0ow78w.jpg" alt="屏幕快照 2019-02-06 下午9.46.31.png"><br>会直接导致无法登录后台，网站主页也会变成没有css的静态页面，折腾了好久，最终总结了以下两种方法：<br>####方法一:<br>  1.通过ssh进入vps后台，在WordPress的安装目录里找到wp-config.php<br><img src="http://ww1.sinaimg.cn/large/005NKUZGgy1gag9gn0lcej317c0am0wg.jpg" alt="屏幕快照 2019-02-06 下午9.53.10.png"><br>2.增加两条设置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">define(‘WP_HOME’,’http:&#x2F;&#x2F;example.com’);</span><br><span class="line">define(‘WP_SITEURL’,’http:&#x2F;&#x2F;example.com’)</span><br></pre></td></tr></table></figure>
+<p>由于wp-config优先于后台设置，一旦添加这两条语句后，后台关于WordPress地址的设置会变成灰色，如果想动态地修改回来，后台不受影响就看方法二了。<br>####方法二：<br>1.在浏览器直接输入IP地址一般显示的是LNMP页面<br><img src="http://ww1.sinaimg.cn/large/005NKUZGgy1gag9gmwzsij31rg0xy7ct.jpg" alt="屏幕快照 2019-02-06 下午9.37.08.png"><br>2.找到自己的WordPress所使用的数据库名，在wp_option数据表中，将https改回来即可。<br><img src="http://ww1.sinaimg.cn/large/005NKUZGgy1gag9gmtzouj31rs0zegwx.jpg" alt="屏幕快照 2019-02-06 下午9.27.42.png"><br>此时，你会发现你的网站终于恢复正常了~</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://blog.yusheng123.cn/2019/12/18/test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -548,7 +670,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
